@@ -16,6 +16,9 @@ This SQL script includes:
 
 - COVID-19 Vaccine Data Analysis: SQL queries to analyze vaccination data, including trends, distribution, and effectiveness.
 
+## 3. active rental licenses (R code)
+  This project analyzes active rental licenses using R. The dataset includes information on rental properties, license issuance, expiration dates, and property owners. The analysis aims to identify trends in rental license applications and short-term rental properties by community and year.
+
 ## Usage Instructions
 
 ### Excel VLOOKUP:
