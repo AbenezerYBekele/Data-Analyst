@@ -4,9 +4,6 @@ library(tidyverse)
 library(janitor)
 library(dplyr)
 library(ggplot2)
-# Import the Data
-
-# Replace the space provided with the file path or use GUI options of RStudio to import the data as an Excel file
 
 rental_Data <- read_csv("C:/Users/abiye/OneDrive - University of Wisconsin-River Falls/Spring Semester 2024/Data Science/datas/Active_Rental_Licenses.csv")
 
@@ -19,13 +16,10 @@ rental_Data <- rental_Data |>
 rental_Data <- rental_Data |> 
   select (license_number, milestone, issue_date, expiration_date, owner_name, owner_city, licensed_units, community_desc, short_term_rental)
 
-# Check for any duplicate records
-# http://jenrichmond.rbind.io/post/digging-into-the-janitor-package/
 rental_Data |> 
   get_dupes() |> 
   View()
 
-# Remove duplicates
 rental_Data <- rental_Data |> 
   distinct() 
 
@@ -44,7 +38,6 @@ rental_Data |>
   tally() |> 
   arrange(desc(n))
 
-# Task 1
 
 rental_Data <- rental_Data |>  
   mutate(year_issued = format(issue_date, format = "%Y")) 
@@ -55,13 +48,12 @@ rental_Data <- rental_Data |>
 rental_Data <- rental_Data |>  
   mutate(day_issued = format(issue_date, format = "%d")) 
 
-# https://lubridate.tidyverse.org/reference/day.htmlLinks to an external site.
+
 
 rental_Data <- rental_Data |>  
   mutate(week_day_issued = wday(issue_date, label = TRUE)) 
 
 
-# Task 2
 rental_Data <- rental_Data |>
   group_by(community_desc) |>
   summarize(number_of_properties = n()) |>
@@ -69,7 +61,6 @@ rental_Data <- rental_Data |>
 
 print(rental_Data)
 
-# Task 3
 
 rental_Data |>
   filter(!is.na(community_desc)) |>
@@ -79,14 +70,12 @@ rental_Data |>
   ungroup()
 
 
-#Task 4
 result <- rental_Data |>
   filter(!is.na(community_desc)) |>
   group_by(community_desc) |>
   summarize(number_of_properties = n()) |>
   arrange(desc(number_of_properties))
 
-# Create a bar chart
 ggplot(result, aes(x = reorder(community_desc, -number_of_properties), y = number_of_properties)) +
   geom_bar(stat = "identity", fill = "skyblue") +
   labs(title = "Number of Rental Properties by Community",
@@ -96,11 +85,10 @@ ggplot(result, aes(x = reorder(community_desc, -number_of_properties), y = numbe
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 
-#Task 5
 result <- rental_Data |>
   group_by(year_issued) |>
   summarize(number_of_applications = n())
-#Task 6
+
 rental_Data |>
   group_by(year_issued) |>
   summarize(numberOfRecords = n()) |>
@@ -112,7 +100,6 @@ rental_Data |>
   labs( title = "Growth in Rental License Applications", subtitle = "Data from 1991 to 2024", caption = "Source: Minneapolis Data Portal" ) +
   labs( x = "Year", y = "Number of Rental Applications" )
 
-#Task 7
 rental_Data |>
   filter(year_issued == '1999') |>
   group_by(month_issued) |>
