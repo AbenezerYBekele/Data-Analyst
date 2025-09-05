@@ -1,9 +1,9 @@
 ## Chicago Urban Analysis
-This data analysis project explores the relationships between socioeconomic factors, education metrics, and crime statistics across Chicago's community areas. Using SQL and Python, the analysis reveals key patterns that could inform urban policy decisions.
-### Technologies Used
-- **Python** (Pandas, Matplotlib, Seaborn)
-- **SQL** (SQLite)
-- **Jupyter Notebook**
+- Acquired and integrated data from multiple sources, web scraping Chicago neighborhood data from Wikipedia using pandas and programmatically querying the Foursquare API for real-time venue information.
+- Utilized geopy to convert neighborhood names into geographic coordinates (latitude/longitude), preparing the dataset for geospatial analysis and visualization.
+- Applied unsupervised machine learning by implementing a K-Means clustering algorithm in scikit-learn to segment 100+ neighborhoods into distinct clusters based on their most common venue categories.
+- Created interactive geospatial visualizations with folium, mapping the identified neighborhood clusters to provide a clear and intuitive understanding of Chicago's urban landscape and the unique character of each area.
+
 ## Exploratory Data Analysis of Stock Market Trends
 - Acquired and integrated time-series stock data and quarterly revenue data from multiple sources, utilizing the yfinance API for market data and Python (Requests, BeautifulSoup) for web scraping financial statements.
 - Performed comprehensive data cleaning and preprocessing on raw financial data using pandas, ensuring data integrity by handling missing values, standardizing formats, and performing data type conversions.
@@ -16,7 +16,4 @@ This data analysis project explores the relationships between socioeconomic fact
 - Standardized and normalized data for comparative analysis, converting categorical variables into numerical indicators (one-hot encoding) and scaling features like "length," "width," and "horsepower" to a common range.
 - Performed feature engineering to create a new, more descriptive "horsepower-binned" variable, effectively transforming continuous data into a categorical feature to improve model interpretability.
 - Conducted data formatting and type correction across the dataset, ensuring all columns were aligned with their appropriate data types (e.g., int, float, object) for analytical accuracy.
-### Technologies Used
-- **Python** (Pandas, Matplotlib, Seaborn, NumPy)
-- **Requests**
-- **Jupyter Notebook**
+
