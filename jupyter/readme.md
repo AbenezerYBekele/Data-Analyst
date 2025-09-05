@@ -17,3 +17,9 @@
 - Performed feature engineering to create a new, more descriptive "horsepower-binned" variable, effectively transforming continuous data into a categorical feature to improve model interpretability.
 - Conducted data formatting and type correction across the dataset, ensuring all columns were aligned with their appropriate data types (e.g., int, float, object) for analytical accuracy.
 
+## Medicaid Coverage Analysi
+- **Conducted In-depth Medicaid Coverage Analysis using Python:** Performed a comprehensive analysis of Medicaid coverage data, demonstrating proficiency in Python for complex dataset exploration and interpretation.
+- **Applied Advanced Data Cleaning and Transformation Techniques:** Effectively managed and cleaned real-world healthcare data, addressing inconsistencies and preparing the dataset for accurate and reliable analysis.
+- **Identified Key Trends and Disparities in Healthcare Coverage:** Utilized statistical analysis and visualization to uncover significant patterns and disparities within Medicaid coverage, providing valuable insights into public health.
+- **Developed Informative Visualizations for Stakeholder Communication:** Created clear and impactful data visualizations (e.g., using Matplotlib/Seaborn) to present analytical findings, making complex healthcare statistics understandable for decision-makers.
+- **Demonstrated Ability to Derive Actionable Insights from Public Health Data:** Leveraged analytical skills to transform raw Medicaid data into actionable insights, highlighting areas for potential policy improvements or targeted interventions.
