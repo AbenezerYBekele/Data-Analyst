@@ -1,5 +1,4 @@
 
--- SQLite Query to Find the Country with the Highest Total Vaccinations
 SELECT 
     COUNTRY,
     [TOTAL VACCINATIONS] 
@@ -94,6 +93,7 @@ SELECT
 FROM "vaccination-data"
 GROUP BY WHO_REGION
 ORDER BY [Total vaccinations in region] DESC;
+
 
 
 
