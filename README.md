@@ -1,52 +1,75 @@
-# Data Analyst Portfolio
+# Abenezer Bekele - Data Analyst Portfolio
 
-This repository contains various projects and datasets showcasing data analysis skills, including Excel-based lookups and SQL queries related to public health data.
+Hello! I'm a data analyst skilled in using Python, R, SQL, and Excel to transform complex data into clear, actionable insights. This repository showcases my project work, demonstrating the complete data analysis lifecycle.
 
-Repository Contents
+---
 
-## vehicle management
-- Built interactive Pivot Tables and Pivot Charts in Excel to analyze fleet vehicle data across departments, years, and makes.
-- Calculated average odometer readings, purchase price, and annual maintenance costs to identify trends and cost drivers.
-- Cleaned and structured raw data from multiple worksheets into a standardized format for accurate reporting.
-- Delivered a department-level performance dashboard to highlight high-cost vehicles and optimize replacement planning.
-- Applied data visualization and Excel automation techniques to transform raw datasets into actionable business insights.
+## Education & Certifications
 
-## 1. Vlookup (Excel File)
+*   **Bachelor of Science in Computer Science and Information Systems**
+*   **IBM Data Science Professional Certificate**
+*   **IBM Data Analysis Fundamentals Certificate**
 
-This file demonstrates proficiency in Excel's VLOOKUP function for data retrieval and analysis. It is useful for finding and matching values from structured tables efficiently.
+---
 
-## 2. NewDatabase (SQL Script)
+## Technical Skills
 
-This SQL script includes:
+*   **Languages:** Python, R, SQL, VBA
+*   **Core Libraries:** Pandas, Scikit-learn, Tidyverse (dplyr, ggplot2), Matplotlib, Folium, Plotly
+*   **Databases:** SQL (Joins, CTEs, Window Functions, DDL/DML, Views)
+*   **Tools:** Excel (PivotTables, Power Query, Macros), Jupyter Notebook, Git, GitHub
 
-- Obesity Data Analysis: Queries related to obesity trends, categorization, and statistics.
+---
 
-- COVID-19 Vaccine Data Analysis: SQL queries to analyze vaccination data, including trends, distribution, and effectiveness.
+## Portfolio Projects
 
-## 3. active rental licenses (R code)
-  This project analyzes active rental licenses using R. The dataset includes information on rental properties, license issuance, expiration dates, and property owners. The analysis aims to identify trends in rental license applications and short-term rental properties by community and year.
+### 📂 Jupyter (Python)
 
-## Usage Instructions
+*   **Chicago Urban Analysis:** [View Code](https://github.com/AbenezerYBekele/data-analyst/blob/main/jupyter/Chicago%20Urban%20Analysis.ipynb)
+    *   Segmented Chicago neighborhoods using **K-Means clustering** and the **Foursquare API**, visualizing the results with **Folium** maps.
 
-### Excel VLOOKUP:
+*   **Stock Market EDA (Tesla vs. GameStop):** [View Code](https://github.com/AbenezerYBekele/data-analyst/blob/main/jupyter/Polished_Data_Analysis_Portfolio.ipynb)
+    *   Performed a comparative analysis of stock trends, contrasting fundamental growth with market sentiment using data from the **yfinance API**.
 
-Open the Excel file.
+*   **Used Cars Data Wrangling:** [View Code](https://github.com/AbenezerYBekele/data-analyst/blob/main/jupyter/Data%20Wrangling%20Used%20Cars%20Pricing.ipynb)
+    *   Executed a full data cleaning and feature engineering pipeline on a raw dataset using **pandas**, featuring imputation, normalization, and one-hot encoding.
 
-Explore the VLOOKUP formula implementation for data search and retrieval.
+*   **Medicaid Coverage Analysis:** [View Code](https://github.com/AbenezerYBekele/data-analyst/blob/main/jupyter/Medicaid%20Coverage%20Analysis.ipynb)
+    *   Analyzed public health data to identify key trends and disparities in healthcare coverage, presenting findings with **Matplotlib/Seaborn**.
 
-### SQL Database:
+### 📂 SQL
 
-Import the newDatabase SQL script into a database management system (e.g., MySQL, PostgreSQL, or SQLite).
+*   **COVID-19 Vaccinations & Deaths Analysis:** [View Code](https://github.com/AbenezerYBekele/data-analyst/blob/main/SQL/covid-19%20vaccine.sql)
+    *   Analyzed pandemic data using advanced SQL, including **Window Functions** to create rolling counts and **CTEs** for vaccination percentage calculations.
 
-Execute the queries to analyze obesity trends and COVID-19 vaccination data.
+*   **Global Obesity Trends Analysis:** [View Code](https://github.com/AbenezerYBekele/data-analyst/blob/main/SQL/Obesitysql.sql)
+    *   Identified year-over-year global obesity trends by implementing a **Self-Join** to compare sequential data points.
 
-## Requirements
+*   **HR Analytics Database Schema:** [View Code](https://github.com/AbenezerYBekele/data-analyst/blob/main/SQL/HR%20Analytics%20Database%20Schema.sql)
+    *   Designed and built a normalized HR database from scratch, optimizing it with **Indexes** and creating analytical **Views**.
 
-For Excel: Microsoft Excel or Google Sheets.
+*   **Pet Store Database Management:** [View Code](https://github.com/AbenezerYBekele/data-analyst/blob/main/SQL/Petstoresql.sql)
+    *   Demonstrated the full table lifecycle using **DDL** (`CREATE`, `ALTER`, `DROP`) and **DML** (`INSERT`, `UPDATE`).
 
-For SQL: A database management system like MySQL, PostgreSQL, or SQLite.
+### 📂 R
 
-## Author
+*   **Washington State Art Collection Analysis:** [View R Script]() *(<-- Add link to your R file here)*
+    *   Analyzed the state's art collection using the **Tidyverse**, focusing on data cleaning (`dplyr`) and creating visualizations (`ggplot2`).
 
-Abenezer Y. Bekele
+*   **Minneapolis Rental Licenses Analysis:** [View R Script]() *(<-- Add link to your R file here)*
+    *   Analyzed rental market trends, performing feature engineering on dates with **lubridate** and creating time-series visualizations.
 
+### 📂 Excel
+
+*   **Coffee Shop Sales Dashboard:** [View Excel File]() *(<-- Add link to your Excel file here)*
+    *   Created a dynamic sales dashboard using **PivotTables** and charts to track KPIs and visualize customer behavior.
+
+*   **Bike Sales Analysis & Automation:** [View Excel File]() *(<-- Add link to your Excel file here)*
+    *   Analyzed sales data and automated reporting tasks with **macros and VBA**, improving efficiency by 30%.
+
+---
+
+## Contact
+
+*   **LinkedIn:** [Your LinkedIn Profile URL]
+*   **Email:** [your.email@example.com]
