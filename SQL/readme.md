@@ -48,6 +48,29 @@ This script demonstrates advanced SQL and database design by building a complete
 ### Purpose
 This script builds a robust backend ready for analysis in BI tools like Tableau or Power BI, simplifying complex queries for end-users by providing ready-made analytical views.
 
+## Per store 
+This project is a practical demonstration of fundamental database management skills using SQL. The script walks through the complete lifecycle of creating, modifying, and deleting database tables, showcasing proficiency in both Data Definition Language (DDL) and Data Manipulation Language (DML).
 
+### Key SQL Techniques Demonstrated
 
+*   **Data Definition Language (DDL):**
+    *   `CREATE TABLE`: Building tables from scratch.
+    *   `ALTER TABLE`: Modifying an existing table structure by:
+        *   `ADD COLUMN`: Adding a new feature.
+        *   `DROP COLUMN`: Removing a feature.
+        *   `CHANGE COLUMN`: Renaming and redefining a column for consistency.
+*   **Data Manipulation Language (DML):**
+    *   `INSERT INTO`: Populating tables with initial data.
+    *   `UPDATE`: Modifying records in the table after a schema change.
+*   **Table Lifecycle Management:**
+    *   `TRUNCATE TABLE`: Efficiently deleting all data while keeping the table structure.
+    *   `DROP TABLE`: Completely removing a table and its structure.
+
+### Script Workflow
+
+The script is logically structured to simulate real-world database tasks:
+1.  **Setup:** Drops existing tables to ensure a clean start.
+2.  **Creation:** Builds and populates the `PETSALE` and `PET` tables.
+3.  **Modification:** Alters the `PETSALE` table by adding, updating, and removing columns.
+4.  **Deletion:** Cleans up the database using both `TRUNCATE` and `DROP`.
 
