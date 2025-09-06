@@ -25,7 +25,7 @@ Hello! I'm a data analyst skilled in using Python, R, SQL, and Excel to transfor
 
 ### 📂 Jupyter (Python)
 
-*   **Chicago Urban Analysis:** [View Code](https://github.com/AbenezerYBekele/data-analyst/blob/main/jupyter/Chicago%20Urban%20Analysis.ipynb)
+*   **Chicago Urban Analysis:** [View Code](https://github.com/AbenezerYBekele/data-analyst/blob/main/jupyter/Exploratory-Data-Analysis-of-Stock-Market%20Trends.ipynb)
     *   Segmented Chicago neighborhoods using **K-Means clustering** and the **Foursquare API**, visualizing the results with **Folium** maps.
 
 *   **Stock Market EDA (Tesla vs. GameStop):** [View Code](https://github.com/AbenezerYBekele/data-analyst/blob/main/jupyter/Polished_Data_Analysis_Portfolio.ipynb)
