@@ -66,11 +66,4 @@ This project is a practical demonstration of fundamental database management ski
     *   `TRUNCATE TABLE`: Efficiently deleting all data while keeping the table structure.
     *   `DROP TABLE`: Completely removing a table and its structure.
 
-### Script Workflow
-
-The script is logically structured to simulate real-world database tasks:
-1.  **Setup:** Drops existing tables to ensure a clean start.
-2.  **Creation:** Builds and populates the `PETSALE` and `PET` tables.
-3.  **Modification:** Alters the `PETSALE` table by adding, updating, and removing columns.
-4.  **Deletion:** Cleans up the database using both `TRUNCATE` and `DROP`.
 
