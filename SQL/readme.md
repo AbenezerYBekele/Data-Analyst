@@ -30,18 +30,24 @@ This project uses SQL to explore a global COVID-19 dataset. The primary goal is 
 *   What percentage of the population has received at least one vaccine dose?
 *   How do infection rates and death percentages vary by country?
 
-## Digital Media Store (Chinook)
+## HR Analytics Database Schema
 
 ### Project Summary
-This SQL script creates and populates the complete schema for the Chinook database, a sample database representing a digital media store. The purpose of this script is to establish a foundational relational database environment for performing data analysis.
 
-### Database Schema Highlights
-The script builds a multi-table relational database with key tables including:
-*   `Tracks` & `Albums`
-*   `Artists`
-*   `Invoices` & `Invoice_Items`
-*   `Customers`
-*   `Employees`
-### Purpose for Analysis
-This script serves as the setup for a practice environment. It creates the necessary structure and data to write and test advanced SQL queries that could answer business questions related to sales performance, customer purchasing habits, and music genre popularity.
-  
+This script demonstrates advanced SQL and database design by building a complete, normalized HR database from scratch. It focuses on ensuring data integrity, optimizing query performance, and creating powerful, pre-joined analytical views for business intelligence.
+
+### Key SQL Techniques Demonstrated
+*   **Relational Database Design:** Created a multi-table schema (`Employees`, `Jobs`, `Departments`).
+*   **Data Integrity:** Enforced rules using `PRIMARY KEY`, `FOREIGN KEY`, `UNIQUE`, and `CHECK` constraints.
+*   **Performance Optimization:** Added `INDEX`es on foreign keys to accelerate join performance.
+*   **Advanced Views (`CREATE VIEW`):**
+    *   Built a denormalized `view_employee_details` by joining five tables and performing a **self-join**.
+    *   Created an aggregated `view_department_salary_summary` for high-level reporting.
+*   **Feature Engineering:** Calculated new fields like employee tenure and salary range utilization directly within a view.
+
+### Purpose
+This script builds a robust backend ready for analysis in BI tools like Tableau or Power BI, simplifying complex queries for end-users by providing ready-made analytical views.
+
+
+
+
