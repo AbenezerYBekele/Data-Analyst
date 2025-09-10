@@ -11,6 +11,7 @@ Hello! I'm a data analyst skilled in using Python, R, SQL, and Excel to transfor
 *   **IBM Data Analysis with python**
 *   **IBM Data Visualization with python**
 *   **IBM Data Analysis Fundamentals Certificate**
+*   **IBM Databases and SQL for Data Science with Python**
 
 ---
 
