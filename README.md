@@ -64,10 +64,10 @@ Hello! I'm a data analyst skilled in using Python, R, SQL, and Excel to transfor
 
 ### 📂 Excel
 
-*   **Coffee Shop Sales Dashboard:** [**Coffee Shop Sales Dashboard:**](https://github.com/AbenezerYBekele/data-analyst/blob/main/excel/Coffee%20Shop%20Sales.xlsx) 
+*   [**Coffee Shop Sales Dashboard:**](https://github.com/AbenezerYBekele/data-analyst/blob/main/excel/Coffee%20Shop%20Sales.xlsx) 
     *   Created a dynamic sales dashboard using **PivotTables** and charts to track KPIs and visualize customer behavior.
 
-*    [**Bike Sales Analysis & Automation:**](https://github.com/AbenezerYBekele/data-analyst/blob/main/excel/BikeSales.xlsx) 
+*   [**Bike Sales Analysis & Automation:**](https://github.com/AbenezerYBekele/data-analyst/blob/main/excel/BikeSales.xlsx) 
     *   Analyzed sales data and automated reporting tasks with **macros and VBA**, improving efficiency by 30%.
 
 ---
