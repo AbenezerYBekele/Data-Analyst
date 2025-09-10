@@ -8,6 +8,8 @@ Hello! I'm a data analyst skilled in using Python, R, SQL, and Excel to transfor
 
 *   **Bachelor of Science in Computer Science and Information Systems**
 *   **IBM Data Science Professional Certificate**
+*   **IBM Data Analysis with python**
+*   **IBM Data Visualization with python**
 *   **IBM Data Analysis Fundamentals Certificate**
 
 ---
