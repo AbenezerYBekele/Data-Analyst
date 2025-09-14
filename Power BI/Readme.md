@@ -92,4 +92,4 @@ To view and interact with the report:
 
 - **Name:** Abenezer Y. Bekele
 - **GitHub:** [AbenezerYBekele](https://github.com/AbenezerYBekele)
-- **LinkedIn:** [Your LinkedIn Profile URL]
+- **LinkedIn:** [LinkedIn](https://www.linkedin.com/in/abenezer-bekele/)
