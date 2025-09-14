@@ -8,7 +8,6 @@ A comprehensive data analysis project showcasing key business metrics and insigh
 ## 📋 Table of Contents
 
 - [Project Overview](#%EF%B8%8F-project-overview)
-- [Data Sources](#-data-sources)
 - [Tools Used](#-tools-used)
 - [Data Cleaning and Preparation](#-data-cleaning-and-preparation)
 - [Data Modeling](#-data-modeling)
@@ -21,16 +20,7 @@ A comprehensive data analysis project showcasing key business metrics and insigh
 
 ## 🏷️ Project Overview
 
-This project aims to analyze [mention the subject, e.g., sales data, financial performance, customer behavior] from [mention the time period, e.g., 2023-2024] to identify trends, patterns, and opportunities for business improvement. The interactive dashboard provides a clear and concise view of key performance indicators (KPIs) and allows for a deeper dive into the underlying data.
-
----
-
-## 💾 Data Sources
-
-The data for this analysis was sourced from [mention the source, e.g., a CSV file, a SQL database, a public dataset from Kaggle]. The primary dataset includes information about:
-
-- **Dataset 1:** [e.g., `sales_data.csv`] - Contains transactional data including product details, quantities, and prices.
-- **Dataset 2:** [e.g., `customer_info.xlsx`] - Contains demographic information about customers.
+This project aims to analyze [mention the subject, e.g., sales data, financial performance, customer behavior] from [mention the time period, e.g., 2022-2024] to identify trends, patterns, and opportunities for business improvement. The interactive dashboard provides a clear and concise view of key performance indicators (KPIs) and allows for a deeper dive into the underlying data.
 
 ---
 
