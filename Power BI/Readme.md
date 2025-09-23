@@ -1,4 +1,4 @@
-# Power BI Projects: [Your Project Title]
+# Power BI Projects: financial performance
 
 A comprehensive data analysis project showcasing key business metrics and insights through an interactive Power BI dashboard.
 
