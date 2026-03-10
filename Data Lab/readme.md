@@ -1,13 +1,7 @@
 # Principal Component Analysis (PCA) Project
-
-**Author:** Abenezer Y. Bekele  
+  
 **Project Type:** Data Analysis / Dimensionality Reduction  
 **Tools:** Python, Pandas, NumPy, Scikit-Learn, Matplotlib, Seaborn, Jupyter Notebook  
-
-**Notebook:**  
-https://github.com/AbenezerYBekele/Data-Analyst/blob/main/Data%20Lab/PCA_Analysis_Abenezer_Y_Bekele.ipynb
-
----
 
 ## Project Overview
 
@@ -43,11 +37,9 @@ The analysis was performed using **Python and Scikit-Learn** within a **Jupyter 
 
 1. **Data Loading**
    - Import dataset and inspect its structure
-
 2. **Data Cleaning**
    - Handle missing values
    - Prepare features for analysis
-
 3. **Feature Scaling**
    - Standardize features using `StandardScaler`
 
@@ -62,7 +54,6 @@ The analysis was performed using **Python and Scikit-Learn** within a **Jupyter 
 6. **Visualization**
    - Plot principal components
    - Visualize variance explained by components
-
 ---
 
 ## Key Insights
@@ -71,6 +62,4 @@ The analysis was performed using **Python and Scikit-Learn** within a **Jupyter 
 - Dimensionality reduction improved interpretability and visualization of the dataset.
 - Principal components revealed hidden patterns among the original variables.
 
----
 
-## Project Structure
