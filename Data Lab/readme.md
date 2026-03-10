@@ -62,4 +62,33 @@ The analysis was performed using **Python and Scikit-Learn** within a **Jupyter 
 - Dimensionality reduction improved interpretability and visualization of the dataset.
 - Principal components revealed hidden patterns among the original variables.
 
+# Drug Classification Using Decision Trees
 
+## Overview
+This project builds a **Decision Tree classification model** to predict the most suitable drug for patients based on medical attributes such as age, sex, blood pressure, cholesterol level, and sodium-to-potassium ratio.
+
+## Objectives
+- Perform basic data exploration and preprocessing
+- Encode categorical variables for machine learning
+- Train a **Decision Tree Classifier**
+- Evaluate model performance
+- Visualize the decision tree
+
+## Dataset Features
+- Age
+- Sex
+- Blood Pressure
+- Cholesterol
+- Na_to_K (Sodium-to-Potassium Ratio)
+
+**Target:** Drug type (A, B, C, X, Y)
+
+## Tools & Libraries
+- Python
+- Pandas
+- NumPy
+- Scikit-learn
+- Matplotlib
+
+## Result
+The model successfully classifies the appropriate drug based on patient characteristics and demonstrates how decision trees can support data-driven healthcare decisions.
