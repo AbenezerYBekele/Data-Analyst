@@ -98,6 +98,18 @@ The model successfully classifies the appropriate drug based on patient characte
 
 This project builds a production-style binary classification pipeline to predict whether a Titanic passenger survived. It showcases an end-to-end machine learning workflow using scikit-learn  from exploratory analysis and feature engineering through hyperparameter tuning and model evaluation.
 
+![Python](https://img.shields.io/badge/Python-3.8%2B-3776ab?logo=python&logoColor=white)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-1.x-f89939?logo=scikit-learn&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-22c55e)
+
+## What's Inside
+
+- `ColumnTransformer` pipeline with median/mode imputation, scaling, and one-hot encoding
+- `GridSearchCV` + `StratifiedKFold` to tune both models while respecting class imbalance
+- Classification reports, confusion matrices, and feature importance visualizations
+- Side-by-side model comparison (~82% test accuracy for both)
+  
+
 Two classifiers are trained, tuned, and compared:
 - **Random Forest** with feature importance analysis
 - **Logistic Regression** with coefficient magnitude analysis
