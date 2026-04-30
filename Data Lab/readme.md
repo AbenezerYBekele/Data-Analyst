@@ -92,3 +92,14 @@ This project builds a **Decision Tree classification model** to predict the most
 
 ## Result
 The model successfully classifies the appropriate drug based on patient characteristics and demonstrates how decision trees can support data-driven healthcare decisions.
+
+
+# Titanic survival prediction
+
+This project builds a production-style binary classification pipeline to predict whether a Titanic passenger survived. It showcases an end-to-end machine learning workflow using scikit-learn  from exploratory analysis and feature engineering through hyperparameter tuning and model evaluation.
+
+Two classifiers are trained, tuned, and compared:
+- **Random Forest** with feature importance analysis
+- **Logistic Regression** with coefficient magnitude analysis
+
+Key techniques demonstrated: stratified train/test splitting, `ColumnTransformer` preprocessing pipelines (median/mode imputation, standard scaling, one-hot encoding), `GridSearchCV` with `StratifiedKFold` cross-validation, and confusion matrix + classification report evaluation.
