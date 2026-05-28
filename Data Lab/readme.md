@@ -115,3 +115,26 @@ Two classifiers are trained, tuned, and compared:
 - **Logistic Regression** with coefficient magnitude analysis
 
 Key techniques demonstrated: stratified train/test splitting, `ColumnTransformer` preprocessing pipelines (median/mode imputation, standard scaling, one-hot encoding), `GridSearchCV` with `StratifiedKFold` cross-validation, and confusion matrix + classification report evaluation.
+
+# Telecom Customer Churn Prediction
+
+Logistic Regression model that predicts whether a telecom customer will leave based on demographic and service-usage data.
+
+## Overview
+- **Dataset:** IBM Telco Churn — 200 customers, 7 features (tenure, age, address, income, education, employment, equipment)
+- **Model:** Logistic Regression with StandardScaler preprocessing
+- **Result:** Log Loss of ~0.54 on a held-out 20% test set
+
+## Key Findings
+- `equip` and `tenure` are the strongest predictors of churn
+- Customers with longer tenure are significantly less likely to churn
+- StandardScaler was critical due to large differences in feature scale (e.g. income vs. education level)
+
+## Tech Stack
+`Python` `scikit-learn` `pandas` `NumPy` `Matplotlib`
+
+## Files
+| File | Description |
+|------|-------------|
+| `Customer_Churn_Logistic_Regression.ipynb` | Full analysis with visualizations |
+| `logistic_regression_churn.py` | Clean standalone script |
