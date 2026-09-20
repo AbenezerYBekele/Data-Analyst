@@ -68,14 +68,6 @@ The final dashboard consists of multiple interactive visuals designed to provide
 
 ---
 
-## 💡 Key Insights
-
-The analysis revealed several key findings:
-
-1.  **Insight 1:** [e.g., The West region consistently generated the highest sales, contributing to 40% of the total revenue in the last fiscal year.]
-2.  **Insight 2:** [e.g., Product Category 'Electronics' has the highest profit margin, despite not being the top seller by volume.]
-3.  **Insight 3:** [e.g., A significant dip in sales was observed during the month of February, which warrants further investigation.]
-
 ---
 
 ## 🚀 How to Use
