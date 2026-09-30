@@ -1,87 +1,149 @@
-# Power BI Projects: financial performance
+# Plant Co. Sales Performance Dashboard
 
-A comprehensive data analysis project showcasing key business metrics and insights through an interactive Power BI dashboard.
+**Power BI | DAX | Power Query | Data Modeling | Time Intelligence**
 
-<img width="1268" height="711" alt="image" src="https://github.com/user-attachments/assets/fec89db8-7871-44aa-af9b-7c28713b5d26" />
+An interactive Power BI dashboard that analyzes Plant Co.'s Sales, Gross Profit, and Quantity from 2022 to 2024. It compares Year-to-Date (YTD) against Previous Year-to-Date (PYTD) performance and breaks results down by month, country, product, and customer account.
 
-
-## 📋 Table of Contents
-
-- [Project Overview](#%EF%B8%8F-project-overview)
-- [Tools Used](#-tools-used)
-- [Data Cleaning and Preparation](#-data-cleaning-and-preparation)
-- [Data Modeling](#-data-modeling)
-- [Visualizations and Dashboard](#-visualizations-and-dashboard)
-- [Key Insights](#-key-insights)
-- [How to Use](#-how-to-use)
-- [Contact](#-contact)
+<!-- Replace with your dashboard screenshot -->
+<!-- ![Dashboard Preview](screenshots/dashboard.png) -->
 
 ---
 
-## 🏷️ Project Overview
+## Project Summary
 
-This project aims to analyze [mention the subject, e.g., sales data, financial performance, customer behavior] from [mention the time period, e.g., 2022-2024] to identify trends, patterns, and opportunities for business improvement. The interactive dashboard provides a clear and concise view of key performance indicators (KPIs) and allows for a deeper dive into the underlying data.
-
----
-
-## 🛠️ Tools Used
-
-- **Microsoft Power BI:** Used for the entire workflow, including data connection, transformation, modeling, and visualization.
-- **DAX (Data Analysis Expressions):** Utilized for creating complex calculations and custom measures.
-- **Power Query:** Employed for data cleaning, transformation, and preparation (ETL process).
+| | |
+|---|---|
+| **Objective** | Give management a single view of YTD vs. PYTD performance and show where growth or decline originates |
+| **Period** | January 2022 to April 2024 |
+| **Data volume** | 2,440 transactions, 949 accounts across 50 countries, 1,000 products |
+| **Source** | Excel workbook (`Accounts`, `Plant_FACT`, `Plant_Hierarchy` sheets) |
+| **Deliverable** | One-page interactive report with a dynamic metric selector |
 
 ---
 
-## 🧹 Data Cleaning and Preparation
+## Key Findings
 
-During the data preparation phase in Power Query, the following steps were taken:
+| Year | YTD Gross Profit | GP % | Change vs. PYTD |
+|---|---|---|---|
+| 2022 | $5.42M | 40.09% | n/a (first year of data) |
+| 2023 | $5.15M | 39.62% | -$265.3K |
+| 2024 (through Apr 14) | $1.40M | 39.15% | -$77.6K |
 
-- **Data Loading:** Connected to the data sources and loaded the tables.
-- **Handling Missing Values:** [e.g., Removed rows with null values in the 'order_id' column].
-- **Data Type Correction:** [e.g., Ensured 'order_date' was formatted as a Date type and 'sales_amount' as a Decimal Number].
-- **Column Manipulation:** [e.g., Split the 'customer_name' column into 'first_name' and 'last_name'].
-- **Calculated Columns:** [e.g., Created a 'profit' column by subtracting 'cost' from 'revenue'].
-
----
-
-## ⚙️ Data Modeling
-
-A relational data model was built in Power BI to connect the different data tables.
-
-- **Relationships:** Established a one-to-many relationship between the `Customers` table and the `Sales` table on `CustomerID`.
-- **DAX Measures:** Created several key measures to power the visualizations, such as:
-    - `Total Sales = SUM(Sales[Revenue])`
-    - `Profit Margin = DIVIDE([Total Profit], [Total Sales], 0)`
-    - `Year-over-Year Sales Growth = ...`
+- **China is the largest driver of the 2023 decline**, with a gross profit drop of about $405K, followed by Sweden and the United States.
+- **Volume held up while profit fell.** 2023 quantity rose to 555.7K units (up 17.1K), so the gross profit decline points to margin and product-mix pressure rather than lower demand.
+- **Margins eroded gradually**, from 40.09% to 39.62% to 39.15% over the three periods.
+- **2024 is trending below 2023** on both gross profit and quantity (-12.4K units) for the same Jan to Apr 14 window.
 
 ---
 
-## 📊 Visualizations and Dashboard
+## Dashboard Features
 
-The final dashboard consists of multiple interactive visuals designed to provide a comprehensive overview of the data:
-
-- **KPI Cards:** Displaying high-level metrics like Total Revenue, Total Profit, and Number of Customers.
-- **Sales Trend Analysis:** A line chart showing revenue trends over time, with slicers for year and month.
-- **Product Performance:** A bar chart illustrating the top-performing products by sales.
-- **Geographical Sales Map:** A map visual displaying sales distribution by state or country.
-- **Interactive Slicers:** Filters for date, region, and product category to allow for dynamic data exploration.
-
----
+- **Dynamic metric selector:** one slicer switches every KPI, chart, and title between Sales, Gross Profit, and Quantity.
+- **KPI cards:** GP %, YTD, PYTD, and YTD vs. PYTD variance.
+- **Treemap:** bottom 10 countries by YTD vs. PYTD variance.
+- **Waterfall chart:** variance drill-down by Month, Country, and Product.
+- **Combo chart:** monthly and quarterly YTD vs. PYTD by product type (Indoor, Outdoor, Landscape).
+- **Scatter plot:** account profitability segmentation (GP % vs. selected metric).
+- **Dynamic titles:** report and chart titles update with the selected metric and year.
 
 ---
 
-## 🚀 How to Use
+## Data Model
 
-To view and interact with the report:
+Star-schema design with one fact table, two dimensions, a date table, and a disconnected selector table.
 
-1.  Make sure you have **Power BI Desktop** installed.
-2.  Download the `.pbix` file from this repository.
-3.  Open the `Bi projects.pbix` file in Power BI Desktop.
+```
+Dim_Accounts ──(Account_id)── Fact_Sales ──(Product_id)──> Dim_Product
+                                  ^
+                              Dim_Date
+
+slc_Values (disconnected)  ->  drives the metric SWITCH
+_Measures                  ->  central measure table
+```
+
+| Table | Role |
+|---|---|
+| `Fact_Sales` | Sales, quantity, price, COGS, date, account, and product keys |
+| `Dim_Accounts` | Customer, country, coordinates, address (de-duplicated on `Account_id`) |
+| `Dim_Product` | Family, Group, Name hierarchy, size, and type |
+| `Dim_Date` | Calendar table with an `Inpast` flag for PYTD logic |
+| `slc_Values` | Helper table for the metric selector |
+| `_Measures` | Measures organized into Base, YTD, PYTD, and SWITCH folders |
 
 ---
 
-## 📫 Contact
+## Selected DAX
 
-- **Name:** Abenezer Y. Bekele
-- **GitHub:** [AbenezerYBekele](https://github.com/AbenezerYBekele)
-- **LinkedIn:** [LinkedIn](https://www.linkedin.com/in/abenezer-bekele/)
+```DAX
+Gross Profit = [Sales] - [COGs]
+GP%          = DIVIDE([Gross Profit], [Sales])
+
+YTD_Sales  = TOTALYTD([Sales], Fact_Sales[Date_Time])
+
+PYTD_Sales =
+    CALCULATE(
+        [Sales],
+        SAMEPERIODLASTYEAR(Dim_Date[Date]),
+        Dim_Date[Inpast] = TRUE
+    )
+
+S_YTD =
+VAR selected_value = SELECTEDVALUE(Slc_Values[Values])
+RETURN
+    SWITCH(selected_value,
+        "Sales",        [YTD_Sales],
+        "Quantity",     [YTD_Quantity],
+        "Gross Profit", [YTD_GrossProfit],
+        BLANK()
+    )
+
+YTD VS PYTD = [S_YTD] - [S_PYTD]
+```
+
+---
+
+## Data Preparation (Power Query)
+
+- Imported three Excel sheets and promoted headers.
+- Enforced data types for dates, numeric fields, and IDs.
+- Removed duplicate accounts on `Account_id`.
+- Standardized column names (for example, `latitude2` to `latitude`).
+- Built the `slc_Values` helper table for the metric selector.
+
+---
+
+## Skills Demonstrated
+
+- Dimensional modeling (star schema, relationships, disconnected tables)
+- DAX time intelligence (`TOTALYTD`, `SAMEPERIODLASTYEAR`) and variable-based measures
+- Dynamic reporting with `SWITCH` and `SELECTEDVALUE`
+- Data cleaning and transformation in Power Query
+- Dashboard design and business storytelling (variance analysis, drill-down)
+
+---
+
+## Getting Started
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/<your-username>/plantco-performance.git
+   ```
+2. Open `Bi_projects.pbix` in [Power BI Desktop]([https://powerbi.microsoft.com/desktop/](https://github.com/AbenezerYBekele/Data-Analyst/blob/main/Power%20BI/Bi%20projects.pbix)).
+3. If data does not load, update the source: **Home > Transform data > Data source settings > Change Source**, then point to your local copy of `Plant_DTS.xls` and click **Refresh**.
+4. Use the year and metric slicers, then drill into the waterfall and treemap.
+
+---
+
+## Roadmap
+
+- Add a dedicated Sales performance page
+- Add a map visual using account coordinates
+- Add forecasting for profit and quantity
+- Publish to Power BI Service with scheduled refresh
+- Convert the `Dim_Accounts` to `Fact_Sales` relationship to one-to-many, single direction
+
+---
+
+## Author
+
+Abenezer Y Bekele
