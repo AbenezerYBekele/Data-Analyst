@@ -4,8 +4,9 @@
 
 An interactive Power BI dashboard that analyzes Plant Co.'s Sales, Gross Profit, and Quantity from 2022 to 2024. It compares Year-to-Date (YTD) against Previous Year-to-Date (PYTD) performance and breaks results down by month, country, product, and customer account.
 
-<!-- Replace with your dashboard screenshot -->
-<!-- ![Dashboard Preview](screenshots/dashboard.png) -->
+<img width="640" height="360" alt="image" src="https://github.com/user-attachments/assets/ac5b0d8e-0837-4feb-bc58-135e1134a687" />
+<img width="640" height="360" alt="image" src="https://github.com/user-attachments/assets/ab8a9a5c-16c3-4150-8d85-0bf530256786" />
+
 
 ---
 
@@ -125,10 +126,8 @@ YTD VS PYTD = [S_YTD] - [S_PYTD]
 ## Getting Started
 
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/<your-username>/plantco-performance.git
-   ```
-2. Open `Bi_projects.pbix` in [Power BI Desktop]([https://powerbi.microsoft.com/desktop/](https://github.com/AbenezerYBekele/Data-Analyst/blob/main/Power%20BI/Bi%20projects.pbix)).
+
+2. Open `Bi_projects.pbix` in [Power BI Desktop](https://github.com/AbenezerYBekele/Data-Analyst/blob/main/Power%20BI/Bi%20projects.pbix).
 3. If data does not load, update the source: **Home > Transform data > Data source settings > Change Source**, then point to your local copy of `Plant_DTS.xls` and click **Refresh**.
 4. Use the year and metric slicers, then drill into the waterfall and treemap.
 
