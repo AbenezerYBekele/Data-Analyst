@@ -5,7 +5,7 @@ library(dplyr)
 
 
 
-art_Data <- read_csv("C:/Users/abiye/OneDrive - University of Wisconsin-River Falls/Spring Semester 2024/Data Science/datas/Washington_s_State_Art_Collection_2023-10-281.csv")
+art_Data <- read_csv("Washington_s_State_Art_Collection_2023-10-281.csv")
  
 art_Data |> 
   glimpse()
