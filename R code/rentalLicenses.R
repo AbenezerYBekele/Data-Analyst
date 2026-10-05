@@ -5,7 +5,7 @@ library(janitor)
 library(dplyr)
 library(ggplot2)
 
-rental_Data <- read_csv("C:/Users/abiye/OneDrive - University of Wisconsin-River Falls/Spring Semester 2024/Data Science/datas/Active_Rental_Licenses.csv")
+rental_Data <- read_csv("Active_Rental_Licenses.csv")
 
 rental_Data |> 
   glimpse()
